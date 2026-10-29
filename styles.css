@@ -271,8 +271,8 @@ h1, h2, h3 { font-family: var(--font-display); }
   .section-heading h2, .performance h2, .showcase h2, .faq h2 { font-size: 39px; }
   .section-heading > p { margin-top: 18px; }
   .feature-grid { grid-template-columns: 1fr; }
-  .feature-card-large { grid-row: auto; min-height: 450px; }
   .feature-card { min-height: 270px; padding: 21px; }
+  .feature-card.feature-card-large { grid-row: auto; min-height: 450px; }
   .profile-preview { right: 19px; bottom: 20px; left: 19px; padding: 9px; }
   .profile-preview > div { gap: 7px; font-size: 9px; }
   .performance-inner { gap: 30px; }
