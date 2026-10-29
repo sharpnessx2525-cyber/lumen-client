@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lumen adalah launcher komunitas yang ringan dengan pengelolaan mod, profil, dan pengaturan performa dalam satu tempat."
+    />
+    <meta name="theme-color" content="#090d12" />
+    <title>Lumen Client — Main lebih ringan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#beranda" aria-label="Lumen Client, ke beranda">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>LUMEN<span class="brand-light">CLIENT</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Buka navigasi</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama">
+        <a href="#fitur">Fitur</a>
+        <a href="#performa">Performa</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="button button-small button-outline header-download" href="#unduh">Unduh launcher <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="beranda">
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> DIBUAT UNTUK CARA MAINMU</div>
+          <h1>Lebih fokus<br />ke <span class="text-gradient">permainan.</span></h1>
+          <p class="hero-description">
+            Satu launcher untuk mengatur profil, mod, dan pengalaman bermainmu. Ringan saat dibuka,
+            fleksibel saat digunakan.
+          </p>
+          <div class="hero-actions" id="unduh">
+            <a class="button button-primary" href="#platform">
+              Jelajahi opsi unduhan <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button button-quiet" href="#fitur">Kenali fiturnya <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-meta">
+            <div class="avatar-stack" aria-hidden="true"><i>R</i><i>A</i><i>K</i><i>+</i></div>
+            <span>Dirancang bersama komunitas</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Ilustrasi antarmuka launcher Lumen" data-magnetic>
+          <div class="orb orb-one" data-magnetic-layer="-0.8"></div>
+          <div class="orb orb-two" data-magnetic-layer="1"></div>
+          <div class="pixel-spark spark-one"></div>
+          <div class="pixel-spark spark-two"></div>
+          <div class="launcher-window" data-magnetic-layer="1">
+            <div class="window-topbar">
+              <div class="window-brand"><span class="mini-mark"></span> LUMEN</div>
+              <div class="window-controls"><i></i><i></i><i></i></div>
+            </div>
+            <div class="launcher-content">
+              <aside class="launcher-sidebar">
+                <span class="side-icon active">⌂</span><span class="side-icon">◈</span>
+                <span class="side-icon">♙</span><span class="side-icon">⚙</span>
+                <span class="side-avatar">N</span>
+              </aside>
+              <div class="launcher-main">
+                <div class="launcher-heading">
+                  <div><span class="tiny-label">SELAMAT DATANG KEMBALI</span><strong>Night Valley</strong></div>
+                  <span class="online-pill"><i></i> Siap bermain</span>
+                </div>
+                <div class="world-card">
+                  <div class="world-glow"></div>
+                  <div class="world-copy">
+                    <span class="tiny-label">PROFIL TERAKHIR</span>
+                    <strong>Survival <span>01</span></strong>
+                    <small>Fabric · 1.21.x · 8 mod aktif</small>
+                  </div>
+                  <div class="world-cube" aria-hidden="true"><span></span></div>
+                </div>
+                <div class="launcher-footer">
+                  <div class="profile-switch"><span class="profile-dot"></span><span>Profil utama<small>Terbaru</small></span><b>⌄</b></div>
+                  <button class="play-button" type="button" aria-label="Tombol mulai, hanya contoh UI">▶</button>
+                </div>
+                <div class="launcher-caption">MULAI BERMAIN</div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-tag tag-mods" data-magnetic-layer="1.5"><span>✦</span> Mod terkelola</div>
+          <div class="floating-tag tag-boost" data-magnetic-layer="-1.2"><span>↗</span> Performa optimal</div>
+        </div>
+      </section>
+
+      <section class="trust-strip section-wrap" aria-label="Ringkasan fitur">
+        <span>SEMUA YANG DIBUTUHKAN, TANPA RIBET</span>
+        <div><b>01</b> Profil terpisah</div>
+        <div><b>02</b> Mod dalam kendali</div>
+        <div><b>03</b> Pengaturan praktis</div>
+      </section>
+
+      <section class="features section-wrap section-space" id="fitur">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">RUANG MAIN YANG LEBIH PERSONAL</div>
+            <h2>Semua siap.<br /><span class="muted-heading">Tinggal main.</span></h2>
+          </div>
+          <p>Pengaturan yang biasa tersebar kini lebih mudah ditemukan, dikelola, dan disesuaikan dengan caramu bermain.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large" data-magnetic-card>
+            <div class="feature-icon icon-bars" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="card-index">01 / KONTROL</div>
+            <h3>Profil sesuai suasana</h3>
+            <p>Pisahkan dunia, versi, dan konfigurasi. Beralih profil tanpa mengacak pengaturan yang lain.</p>
+            <div class="profile-preview">
+              <div><span class="preview-dot dot-green"></span><span>Survival utama</span><b>1.21.x</b></div>
+              <div><span class="preview-dot dot-purple"></span><span>Eksperimen mod</span><b>1.20.4</b></div>
+              <div><span class="preview-dot dot-orange"></span><span>Vanilla santai</span><b>1.21.x</b></div>
+            </div>
+          </article>
+          <article class="feature-card feature-card-mods" data-magnetic-card>
+            <div class="feature-icon icon-diamond" aria-hidden="true">◇</div>
+            <div class="card-index">02 / MOD</div>
+            <h3>Mod tetap tertata</h3>
+            <p>Kelola mod yang kompatibel dalam satu daftar dan aktifkan hanya yang kamu perlukan.</p>
+            <div class="mod-chips"><span>Sodium <i>✓</i></span><span>Lithium <i>✓</i></span><span>+ milikmu</span></div>
+          </article>
+          <article class="feature-card feature-card-skin" data-magnetic-card>
+            <div class="feature-icon icon-spark" aria-hidden="true">✳</div>
+            <div class="card-index">03 / KUSTOMISASI</div>
+            <h3>Tunjukkan gayamu</h3>
+            <p>Atur tampilan dan preferensi agar pengalaman bermain terasa lebih personal.</p>
+            <div class="skin-preview"><span class="skin-head"></span><span class="skin-body"></span><span class="skin-label">PILIHANMU, CARA MAINMU</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="performance section-space" id="performa">
+        <div class="section-wrap performance-inner">
+          <div class="performance-copy">
+            <div class="eyebrow"><span class="status-dot"></span> DIBUAT UNTUK TERASA RINGAN</div>
+            <h2>Performa yang<br />terasa <span class="text-gradient">beda.</span></h2>
+            <p>Pengaturan dan pilihan mod yang tepat dapat membantu sesi bermain berjalan lebih mulus. Hasilnya bergantung pada perangkat dan konfigurasi.</p>
+            <a class="text-link" href="#tentang">Cara kerja Lumen <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="chart-card" data-magnetic-card>
+            <div class="chart-top">
+              <div><span class="tiny-label">ILUSTRASI PENGUKURAN</span><strong>Frame rate relatif</strong></div>
+              <span class="chart-period">CONTOH</span>
+            </div>
+            <div class="chart-legend"><span><i class="legend-lumen"></i> Dengan konfigurasi Lumen</span><span><i class="legend-base"></i> Konfigurasi dasar</span></div>
+            <div class="chart">
+              <div class="chart-lines"><i></i><i></i><i></i><i></i></div>
+              <div class="bar-group">
+                <div class="bar-column"><span class="bar-value">—</span><div class="bar bar-lumen" style="--height: 83%"></div><div class="bar bar-base" style="--height: 54%"></div><span class="bar-label">Area terbuka</span></div>
+                <div class="bar-column"><span class="bar-value">—</span><div class="bar bar-lumen" style="--height: 69%"></div><div class="bar bar-base" style="--height: 45%"></div><span class="bar-label">Banyak entitas</span></div>
+                <div class="bar-column"><span class="bar-value">—</span><div class="bar bar-lumen" style="--height: 91%"></div><div class="bar bar-base" style="--height: 62%"></div><span class="bar-label">Dunia baru</span></div>
+              </div>
+            </div>
+            <p class="chart-note">Grafik ini hanya ilustrasi UI, bukan hasil benchmark. Performa aktual berbeda pada tiap perangkat.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase section-wrap section-space" id="tentang">
+        <div class="showcase-copy">
+          <div class="eyebrow">DIBUAT UNTUK RUTINITASMU</div>
+          <h2>Lebih sedikit<br />atur-atur.<br /><span class="muted-heading">Lebih banyak eksplorasi.</span></h2>
+          <p>Mulai dari memilih profil sampai meninjau mod, Lumen membantu menjaga semuanya tetap mudah diakses.</p>
+          <a class="button button-outline" href="#platform">Temukan platformmu <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="showcase-visual" data-magnetic>
+          <div class="showcase-glow" data-magnetic-layer="-0.7"></div>
+          <div class="showcase-panel" data-magnetic-layer="1">
+            <div class="showcase-panel-top"><span>PROFIL & MOD</span><span class="panel-dots">•••</span></div>
+            <div class="showcase-world"><div class="tiny-world"></div><div><strong>Petualangan baru</strong><small>Versi 1.21.x · Fabric</small></div><span class="edit-icon">↗</span></div>
+            <div class="showcase-divider"></div>
+            <div class="showcase-panel-top"><span>MOD AKTIF <b>04</b></span><span class="panel-dots">Kelola ↗</span></div>
+            <div class="showcase-mod"><span class="mod-symbol">◌</span><span><b>Sodium</b><small>Optimasi grafis</small></span><i class="toggle-on"></i></div>
+            <div class="showcase-mod"><span class="mod-symbol purple-symbol">✣</span><span><b>Lithium</b><small>Optimasi permainan</small></span><i class="toggle-on"></i></div>
+            <div class="showcase-mod"><span class="mod-symbol blue-symbol">⌘</span><span><b>Mod pilihan</b><small>Aktif di profil ini</small></span><i class="toggle-on"></i></div>
+          </div>
+          <div class="showcase-orbit orbit-a"></div><div class="showcase-orbit orbit-b"></div>
+          <span class="showcase-caption">SATU TEMPAT, LEBIH TERATUR</span>
+        </div>
+      </section>
+
+      <section class="platform-section section-wrap" id="platform">
+        <div class="platform-card">
+          <div>
+            <div class="eyebrow">SIAP MENJELAJAH?</div>
+            <h2>Mulai dari perangkatmu.</h2>
+            <p>Installer perlu ditautkan oleh pemilik proyek sebelum halaman ini siap untuk distribusi.</p>
+          </div>
+          <div class="platform-options">
+            <span class="platform-option"><b>⊞</b> Windows <small>Installer belum ditautkan</small></span>
+            <span class="platform-option"><b>◉</b> macOS <small>Installer belum ditautkan</small></span>
+            <span class="platform-option"><b>◈</b> Linux <small>Installer belum ditautkan</small></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section-wrap section-space" id="faq">
+        <div class="faq-heading">
+          <div class="eyebrow">ADA YANG INGIN DITANYAKAN?</div>
+          <h2>Jawaban singkat,<br /><span class="muted-heading">tanpa teka-teki.</span></h2>
+          <p>Informasi tentang konsep dan penggunaan launcher.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Apa itu Lumen Client?<span aria-hidden="true"></span></summary>
+            <p>Lumen adalah konsep launcher komunitas untuk membantu mengatur profil permainan, mod, dan preferensi dari satu antarmuka.</p>
+          </details>
+          <details>
+            <summary>Apakah Lumen gratis?<span aria-hidden="true"></span></summary>
+            <p>Informasi harga dan lisensi belum ditetapkan pada demo ini. Perbarui bagian ini sesuai ketentuan produk Anda.</p>
+          </details>
+          <details>
+            <summary>Apakah saya bisa memakai mod sendiri?<span aria-hidden="true"></span></summary>
+            <p>Antarmuka ini menggambarkan pengelolaan mod. Dukungan teknis yang sebenarnya perlu disesuaikan dengan implementasi launcher.</p>
+          </details>
+          <details>
+            <summary>Sistem operasi apa yang didukung?<span aria-hidden="true"></span></summary>
+            <p>Bagian unduhan menampilkan Windows, macOS, dan Linux sebagai opsi desain. Tambahkan tautan dan konfirmasi kompatibilitas sebelum rilis.</p>
+          </details>
+          <details>
+            <summary>Bagaimana cara mengunduhnya?<span aria-hidden="true"></span></summary>
+            <p>Belum ada installer yang ditautkan. Hubungkan tombol platform ke berkas rilis resmi saat aplikasi siap dibagikan.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-wrap">
+      <a class="brand" href="#beranda" aria-label="Lumen Client, kembali ke atas">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>LUMEN<span class="brand-light">CLIENT</span></span>
+      </a>
+      <span class="footer-note">Konsep antarmuka launcher komunitas.</span>
+      <a class="back-top" href="#beranda">Kembali ke atas ↑</a>
+    </footer>
+  </body>
+</html>
