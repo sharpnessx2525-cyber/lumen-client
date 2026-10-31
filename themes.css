@@ -1,0 +1,155 @@
+@property --bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090d12;
+}
+@property --panel {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #10161d;
+}
+@property --panel-soft {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #121b22;
+}
+@property --line {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(215, 232, 236, 0.1);
+}
+@property --theme-bg-glow {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(80, 217, 145, 0.12);
+}
+
+.theme-option-white { --theme-swatch: #fff; }
+.theme-option-gray { --theme-swatch: #a9b0b8; }
+.theme-option-neon { --theme-swatch: #a4ffbf; }
+.theme-option-blue { --theme-swatch: #73b7ff; }
+.theme-option-red { --theme-swatch: #ff657a; }
+
+body[data-theme="white"] {
+  --bg: #17191d;
+  --panel: #202329;
+  --panel-soft: #2a2e35;
+  --line: rgba(235, 240, 245, 0.14);
+  --theme-bg-glow: rgba(255, 255, 255, 0.1);
+  --mint: #fff;
+  --mint-deep: #d9e0e5;
+  --mint-rgb: 255, 255, 255;
+  --mint-deep-rgb: 217, 224, 229;
+  --mint-middle: #d8dfe6;
+  --mint-hover: #e9edf0;
+  --mint-contrast: #10161d;
+  --mint-status: #dce4e6;
+}
+body[data-theme="gray"] {
+  --bg: #13171c;
+  --panel: #1b2027;
+  --panel-soft: #252b33;
+  --line: rgba(204, 214, 224, 0.13);
+  --theme-bg-glow: rgba(169, 176, 184, 0.1);
+  --mint: #a9b0b8;
+  --mint-deep: #7c8792;
+  --mint-rgb: 169, 176, 184;
+  --mint-deep-rgb: 124, 135, 146;
+  --mint-middle: #d0d5da;
+  --mint-hover: #c2c7cc;
+  --mint-contrast: #10161d;
+  --mint-status: #c1c8ce;
+}
+body[data-theme="neon"] {
+  --bg: #090d12;
+  --panel: #10161d;
+  --panel-soft: #121b22;
+  --line: rgba(215, 232, 236, 0.1);
+  --theme-bg-glow: rgba(80, 217, 145, 0.12);
+  --mint: #a4ffbf;
+  --mint-deep: #50d991;
+  --mint-rgb: 164, 255, 191;
+  --mint-deep-rgb: 80, 217, 145;
+  --mint-middle: #73e5ce;
+  --mint-hover: #c0ffd1;
+  --mint-contrast: #0a1611;
+  --mint-status: #a4cdb0;
+}
+body[data-theme="blue"] {
+  --bg: #0a1422;
+  --panel: #111f31;
+  --panel-soft: #192a3e;
+  --line: rgba(174, 211, 255, 0.13);
+  --theme-bg-glow: rgba(68, 142, 255, 0.13);
+  --mint: #73b7ff;
+  --mint-deep: #3988f0;
+  --mint-rgb: 115, 183, 255;
+  --mint-deep-rgb: 57, 136, 240;
+  --mint-middle: #7cd7ff;
+  --mint-hover: #a2d0ff;
+  --mint-contrast: #071321;
+  --mint-status: #b4d7fa;
+}
+body[data-theme="red"] {
+  --bg: #1a0d12;
+  --panel: #26131a;
+  --panel-soft: #351a23;
+  --line: rgba(255, 176, 187, 0.14);
+  --theme-bg-glow: rgba(244, 56, 87, 0.13);
+  --mint: #ff657a;
+  --mint-deep: #e33855;
+  --mint-rgb: 255, 101, 122;
+  --mint-deep-rgb: 227, 56, 85;
+  --mint-middle: #ff9a8d;
+  --mint-hover: #ffabb4;
+  --mint-contrast: #260a12;
+  --mint-status: #ffc0c9;
+}
+
+body[data-theme] {
+  transition:
+    --bg .35s ease,
+    --panel .35s ease,
+    --panel-soft .35s ease,
+    --line .35s ease,
+    --theme-bg-glow .35s ease,
+    --mint .35s ease,
+    --mint-deep .35s ease,
+    --mint-middle .35s ease,
+    --mint-hover .35s ease,
+    --mint-contrast .35s ease,
+    --mint-status .35s ease;
+}
+
+body[data-theme] .site-header {
+  border-bottom-color: var(--line);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+}
+body[data-theme] .theme-menu { background: var(--panel); }
+body[data-theme] .hero::before {
+  background: radial-gradient(ellipse, var(--theme-bg-glow), transparent 68%);
+}
+body[data-theme] .feature-card,
+body[data-theme] .chart-card,
+body[data-theme] .showcase-panel {
+  background: linear-gradient(140deg, color-mix(in srgb, var(--panel) 96%, var(--mint) 4%), var(--bg));
+}
+body[data-theme] .profile-preview {
+  background: color-mix(in srgb, var(--panel) 72%, transparent);
+}
+body[data-theme] .performance {
+  border-color: var(--line);
+  background: radial-gradient(ellipse at 18% 56%, var(--theme-bg-glow), transparent 40%), var(--bg);
+}
+body[data-theme] .platform-card {
+  border-color: var(--line);
+  background: radial-gradient(ellipse at 0% 50%, var(--theme-bg-glow), transparent 43%), linear-gradient(125deg, var(--panel-soft), var(--bg));
+}
+
+@media (max-width: 620px) {
+  body[data-theme] .primary-nav { background: var(--bg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-theme] { transition-duration: .01ms; }
+}

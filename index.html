@@ -16,9 +16,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="themes.css" />
+    <script src="image-settings.js" defer></script>
+    <script src="hero-image-settings.js" defer></script>
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body data-theme="neon">
     <header class="site-header">
       <a class="brand" href="#beranda" aria-label="Lumen Client, ke beranda">
         <span class="brand-mark" aria-hidden="true"><span></span></span>
@@ -35,6 +38,18 @@
         <a href="#performa">Performa</a>
         <a href="#tentang">Tentang</a>
         <a href="#faq">FAQ</a>
+        <div class="theme-switch">
+          <button class="theme-trigger" type="button" aria-expanded="false" aria-controls="theme-menu">
+            Tema <span class="theme-current-swatch" aria-hidden="true"></span><span class="theme-chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="theme-menu" id="theme-menu" role="group" aria-label="Pilih warna tema" hidden>
+            <button class="theme-option theme-option-white" type="button" data-theme-option="white" aria-pressed="false"><span></span>Putih</button>
+            <button class="theme-option theme-option-gray" type="button" data-theme-option="gray" aria-pressed="false"><span></span>Abu-abu</button>
+            <button class="theme-option theme-option-neon" type="button" data-theme-option="neon" aria-pressed="true"><span></span>Hijau neon</button>
+            <button class="theme-option theme-option-blue" type="button" data-theme-option="blue" aria-pressed="false"><span></span>Biru</button>
+            <button class="theme-option theme-option-red" type="button" data-theme-option="red" aria-pressed="false"><span></span>Merah</button>
+          </div>
+        </div>
       </nav>
       <a class="button button-small button-outline header-download" href="#unduh">Unduh launcher <span aria-hidden="true">↗</span></a>
     </header>
@@ -65,7 +80,8 @@
           <div class="orb orb-two" data-magnetic-layer="1"></div>
           <div class="pixel-spark spark-one"></div>
           <div class="pixel-spark spark-two"></div>
-          <div class="launcher-window" data-magnetic-layer="1">
+          <div class="launcher-window" data-magnetic-layer="1" data-preview-container="hero">
+            <img class="feature-preview-image hero-preview-image" data-feature-preview-image="hero" alt="Foto preview jendela launcher Lumen" hidden />
             <div class="window-topbar">
               <div class="window-brand"><span class="mini-mark"></span> LUMEN</div>
               <div class="window-controls"><i></i><i></i><i></i></div>
@@ -119,15 +135,18 @@
           <p>Pengaturan yang biasa tersebar kini lebih mudah ditemukan, dikelola, dan disesuaikan dengan caramu bermain.</p>
         </div>
         <div class="feature-grid">
-          <article class="feature-card feature-card-large" data-magnetic-card>
+          <article class="feature-card feature-card-large" data-magnetic-card data-preview-container="profiles">
             <div class="feature-icon icon-bars" aria-hidden="true"><i></i><i></i><i></i></div>
             <div class="card-index">01 / KONTROL</div>
             <h3>Profil sesuai suasana</h3>
             <p>Pisahkan dunia, versi, dan konfigurasi. Beralih profil tanpa mengacak pengaturan yang lain.</p>
             <div class="profile-preview">
-              <div><span class="preview-dot dot-green"></span><span>Survival utama</span><b>1.21.x</b></div>
-              <div><span class="preview-dot dot-purple"></span><span>Eksperimen mod</span><b>1.20.4</b></div>
-              <div><span class="preview-dot dot-orange"></span><span>Vanilla santai</span><b>1.21.x</b></div>
+              <div class="profile-preview-placeholder">
+                <div><span class="preview-dot dot-green"></span><span>Survival utama</span><b>1.21.x</b></div>
+                <div><span class="preview-dot dot-purple"></span><span>Eksperimen mod</span><b>1.20.4</b></div>
+                <div><span class="preview-dot dot-orange"></span><span>Vanilla santai</span><b>1.21.x</b></div>
+              </div>
+              <img class="feature-preview-image" data-feature-preview-image="profiles" alt="Foto preview Profil sesuai suasana" hidden />
             </div>
           </article>
           <article class="feature-card feature-card-mods" data-magnetic-card>
@@ -137,12 +156,15 @@
             <p>Kelola mod yang kompatibel dalam satu daftar dan aktifkan hanya yang kamu perlukan.</p>
             <div class="mod-chips"><span>Sodium <i>✓</i></span><span>Lithium <i>✓</i></span><span>+ milikmu</span></div>
           </article>
-          <article class="feature-card feature-card-skin" data-magnetic-card>
+          <article class="feature-card feature-card-skin" data-magnetic-card data-preview-container="style">
             <div class="feature-icon icon-spark" aria-hidden="true">✳</div>
             <div class="card-index">03 / KUSTOMISASI</div>
             <h3>Tunjukkan gayamu</h3>
             <p>Atur tampilan dan preferensi agar pengalaman bermain terasa lebih personal.</p>
-            <div class="skin-preview"><span class="skin-head"></span><span class="skin-body"></span><span class="skin-label">PILIHANMU, CARA MAINMU</span></div>
+            <div class="skin-preview">
+              <span class="skin-head"></span><span class="skin-body"></span><span class="skin-label">PILIHANMU, CARA MAINMU</span>
+              <img class="feature-preview-image" data-feature-preview-image="style" alt="Foto preview Tunjukkan gayamu" hidden />
+            </div>
           </article>
         </div>
       </section>
